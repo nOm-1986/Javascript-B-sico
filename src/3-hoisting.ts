@@ -15,9 +15,8 @@
  * - COERCIÓN EXPLICITA = Cuando obligamos a que cambie el tipo de valor.
  */
 
-
-
-
 (()=>{
-  let miNombre: string;
+  let miNombre: any = '20.09239';
+  const rta = (<number>miNombre).toFixed(2);
+  console.log(rta);
 })();
