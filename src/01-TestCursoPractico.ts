@@ -47,12 +47,16 @@
  *  Una función es un bloque de codigo el cual puede ser reutilizado muchas veces. Nos evita estar copiando y pegando la misma lógica una y otra vez.
  * ¿Cuándo me sirve usar una función en mi código?
  *  Cuando veo que un segmento de código hace una función determinada, y dicha lógica es implementada en varias partes del programa.
+ *  Tambien nos sirve para mejorar la legibilidad de nuestro código.
  * ¿Cuál es la diferencia entre parámetros y argumentos de una función?
  * Los parámetros son los valores que se necesitan pasar a una función para su correcto funcionamiento. Los argumentos son esos valores que pasamos a la función.
+ * Defin curso: Las funcione reciben parámetros cuando las creamos y les envíamos argumentos cuando las ejecutamos.
  */
 
- const greeting = (name:string, lastName: string, nickName: string='withoutNickName'):void => {
-  console.log(`Hi my name is ${name} ${lastName}, but i prefer everybody talk me ${nickName}.`);
-}
+  const greeting = (name:string, lastName: string, nickName: string='withoutNickName'):void => {
+    console.log(`Hi my name is ${fullName(name, lastName)}, but i prefer everybody talk me ${nickName}.`);
+  }
+
+  greeting(nombre, apellido,userName);
 
 })();
