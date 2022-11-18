@@ -128,10 +128,38 @@
      *     console.log("El valor de i es: " + i);
      * }
     */
-    let i = 0;
+    let i:number = 0;
     while(i < 5) {
       console.log(`El valor de i es: ${i}`);
       i++;
     }
+
+    i=10;
+    while(i >= 2){
+      console.log(`El valor de i es: ${i}`);
+      i--;
+    }
+    /** Listas
+     * 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+     * ¿Qué es un array?
+     *  Es un tipo de dato especial que me permite almacenar una lista de elementos.
+     * ¿Qué es un objeto?
+     *  Es tambien un tipo especial, que contiene propiedades y métodos.
+     * ¿Cuándo es mejor usar objetos o arrays?
+     *  Arrays cuando lo que hacemos es lo mismo para todos, aunque se puede incumplir.
+     *  Objectos, para cuando los nombres de cada elemento son importantes para nuestro algoritmo.
+     * ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+     * Obviously.Los array puede contener objetos y lo objectos puede contener arrays.
+     */
+    //2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
+
+      function printFirstElement(...params: (string | number)[]):void{
+        console.log(params[0]);
+      }
+      printFirstElement('hola', 1,23,4,5,'hola');
+
+      function printInArray(parametros: (number | string)[]):void{
+        console.log(parametros[0]);
+      }
 
 })();
