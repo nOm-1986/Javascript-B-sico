@@ -162,4 +162,23 @@
         console.log(parametros[0]);
       }
 
+      //3️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
+      function printAll(parametros: (number | string)[]):void{
+        parametros.forEach((item) => {
+          console.log(item);
+        });
+      }
+      let myArray: (string | number)[] = [254,35,967,6,84,95,7,'con','strings','hi'];
+      printAll(myArray)
+
+      //4️⃣ Crea una función que pueda recibir cualquier objeto
+      let obj = {
+        nombre : 'Fabián',
+        apellido: 'Beltrán',
+        comidas: ['tinto','bandeja paisa', 'mejor solo la paisa', 'frutas', 'verduras']
+      };
+
+      //let objTransformed = Object.values(obj);
+      //console.log(objTransformed);
+
 })();
