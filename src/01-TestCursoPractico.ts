@@ -59,4 +59,79 @@
 
   greeting(nombre, apellido,userName);
 
+  /** CONDICIONALES
+   * 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+   * ¿Qué es un condicional?
+   *    Es una declaración que nos permite evaluar una condición y en caso de coincidir con una respuesta tomar una ruta u otra.
+   * ¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+   *    IF - ELSE IF - SWITCH - Operador ternario
+   * ¿Puedo combinar funciones y condicionales?
+   *    Claro, dentro de las funciones puedo contener condicionales. Las funciones pueden encapsular cualquier bloque de codigo, incluyendo los condicionales.
+   * 2️⃣ Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
+   */
+
+   const tipoDeSuscripcion:string = "Basic";
+
+   switch (tipoDeSuscripcion) {
+      case "Free":
+          console.log("Solo puedes tomar los cursos gratis");
+          break;
+      case "Basic":
+          console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+          break;
+      case "Expert":
+          console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+          break;
+      case "ExpertPlus":
+          console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+          break;
+   }
+
+   //Bonus:
+   const tipoSuscripcionDos: {tipo:string, acceso:string}[] = [
+    {tipo: 'Free', acceso:'Solo puedes tomar los cursos gratis'},
+    {tipo: 'Basic', acceso:'Puedes tomar casi todos los cursos de Platzi durante un mes'},
+    {tipo: 'Expert', acceso: 'Puedes tomar casi todos los cursos de Platzi durante un año'},
+    {tipo: 'ExpertDuo', acceso: 'Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año'}
+   ];
+
+
+
+   //Transforming to if.
+    if(tipoDeSuscripcion == 'Free') {
+        console.log("Solo puedes tomar los cursos gratis");
+    } else if(tipoDeSuscripcion == 'Basic') {
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+    } else if(tipoDeSuscripcion == 'Expert') {
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    } else if(tipoDeSuscripcion == 'ExpertPlus') {
+        console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+    } else {
+        console.log("Without information");
+    }
+
+    /**Ciclos
+     * 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+     * ¿Qué es un ciclo?
+     *  Son funciones especiales dentro del lenguaje que me permite ejecutar un número de veces una estructura de código.
+     * ¿Qué tipos de ciclos existen en JavaScript?
+     *  for, forEach, while, do-while
+     * ¿Qué es un ciclo infinito y por qué es un problema?
+     *  Es un ciclo que no termina, y gasta recursos en memoria.
+     * ¿Puedo mezclar ciclos y condicionales?
+     *  Si, obviamente.
+     * Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+     * for (let i = 0; i < 5; i++) {
+     *     console.log("El valor de i es: " + i);
+     * }
+     * for (let i = 10; i >= 2; i--) {
+     *     console.log("El valor de i es: " + i);
+     * }
+    */
+    let i = 0;
+    while(i < 5) {
+      console.log(`El valor de i es: ${i}`);
+      i++;
+    }
+
 })();
